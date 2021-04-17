@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const authRoutes = require("./routes/authRoutes");
 const app = express();
+const PORT = 3000;
 
 //middlewares
 app.use(express.static("public"));
@@ -21,7 +22,11 @@ mongoose
 		useUnifiedTopology: true,
 		useCreateIndex: true,
 	})
-	.then((result) => app.listen(3000))
+	.then((result) =>
+		app.listen(PORT, () => {
+			console.log(`Server is running at port ${PORT}`);
+		})
+	)
 	.catch((err) => console.log(err));
 
 //routes
