@@ -1,0 +1,4 @@
+Note:- Somewhere we dont use arrow function because in => function we dont allow to use this keyword to refer of the instances
+--Cookies?
+--> It basically give us a way to store data in a user's browser, that data could be anything you want it could be a name, numeric values etc.
+they can also be used to track your internet activity by services like google
